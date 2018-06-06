@@ -34,10 +34,37 @@ private MainJframe jf;
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        singlePlayerButton = new javax.swing.JButton();
+        multiplayerButton = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("MV Boli", 0, 100)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Tic Tac Toe");
+
+        singlePlayerButton.setBackground(new java.awt.Color(147, 112, 219));
+        singlePlayerButton.setFont(new java.awt.Font("MV Boli", 0, 25)); // NOI18N
+        singlePlayerButton.setForeground(new java.awt.Color(255, 255, 255));
+        singlePlayerButton.setText("Single Player");
+        singlePlayerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                singlePlayerButtonActionPerformed(evt);
+            }
+        });
+
+        multiplayerButton.setBackground(new java.awt.Color(147, 112, 219));
+        multiplayerButton.setFont(new java.awt.Font("MV Boli", 0, 25)); // NOI18N
+        multiplayerButton.setForeground(new java.awt.Color(255, 255, 255));
+        multiplayerButton.setText("Multiplayer");
+        multiplayerButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                multiplayerButtonMouseClicked(evt);
+            }
+        });
+        multiplayerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplayerButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -47,19 +74,43 @@ private MainJframe jf;
                 .addGap(220, 220, 220)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(220, 220, 220))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(multiplayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(singlePlayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(858, Short.MAX_VALUE))
+                .addGap(658, 658, 658)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(singlePlayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(multiplayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(100, 100, 100))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void multiplayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplayerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_multiplayerButtonActionPerformed
+
+    private void singlePlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singlePlayerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_singlePlayerButtonActionPerformed
+
+    private void multiplayerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_multiplayerButtonMouseClicked
+        jf.showPanel(1);
+    }//GEN-LAST:event_multiplayerButtonMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton multiplayerButton;
+    private javax.swing.JButton singlePlayerButton;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -25,17 +25,17 @@
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <Component id="player1" min="-2" pref="228" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="player2" min="-2" pref="228" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="player2" min="-2" pref="228" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -68,14 +68,8 @@
               <Component id="submit2" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="play" min="-2" pref="53" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="13" max="32767" attributes="0"/>
-                      <Component id="homebutton" min="-2" pref="50" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="play" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="homebutton" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
           </Group>
@@ -105,6 +99,7 @@
         <Property name="text" type="java.lang.String" value="Home"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homebuttonMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homebuttonActionPerformed"/>
       </Events>
     </Component>
