@@ -36,11 +36,11 @@ public class MainJframe extends javax.swing.JFrame {
          this.pack();
         // j.setSize(w, h);
         j.setLocation(0,0);
-        j.setSize(1200, 1000);
+        j.setSize(1000, 1000);
         j.setVisible(true);
         
         j2.setLocation(0,0);
-        j2.setSize(1200, 1000);
+        j2.setSize(1000, 1000);
         j2.setVisible(true);
         
         showPanel(0);
