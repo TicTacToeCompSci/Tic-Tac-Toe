@@ -33,84 +33,103 @@ private MainJframe jf;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        singlePlayerButton = new javax.swing.JButton();
-        multiplayerButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Computer = new javax.swing.JButton();
+        title = new javax.swing.JTextField();
+        Multiplayer = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("MV Boli", 0, 100)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Tic Tac Toe");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(204, 153, 255))); // NOI18N
 
-        singlePlayerButton.setBackground(new java.awt.Color(147, 112, 219));
-        singlePlayerButton.setFont(new java.awt.Font("MV Boli", 0, 25)); // NOI18N
-        singlePlayerButton.setForeground(new java.awt.Color(255, 255, 255));
-        singlePlayerButton.setText("Single Player");
-        singlePlayerButton.addActionListener(new java.awt.event.ActionListener() {
+        Computer.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Computer.setText("Computer");
+        Computer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                singlePlayerButtonActionPerformed(evt);
+                ComputerActionPerformed(evt);
             }
         });
 
-        multiplayerButton.setBackground(new java.awt.Color(147, 112, 219));
-        multiplayerButton.setFont(new java.awt.Font("MV Boli", 0, 25)); // NOI18N
-        multiplayerButton.setForeground(new java.awt.Color(255, 255, 255));
-        multiplayerButton.setText("Multiplayer");
-        multiplayerButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                multiplayerButtonMouseClicked(evt);
-            }
-        });
-        multiplayerButton.addActionListener(new java.awt.event.ActionListener() {
+        title.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        title.setText("Welcome to TicTacToe!");
+        title.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                multiplayerButtonActionPerformed(evt);
+                titleActionPerformed(evt);
             }
         });
+
+        Multiplayer.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Multiplayer.setText("Multiplayer");
+        Multiplayer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MultiplayerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Multiplayer, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(184, 184, 184)
+                        .addComponent(Computer, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(114, 114, 114)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Computer, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Multiplayer, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(220, 220, 220)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(220, 220, 220))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(multiplayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
-                .addComponent(singlePlayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
+                .addGap(163, 163, 163)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(197, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(658, 658, 658)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(singlePlayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(multiplayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100))
+                .addGap(179, 179, 179)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(167, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void multiplayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplayerButtonActionPerformed
+    private void titleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_multiplayerButtonActionPerformed
+    }//GEN-LAST:event_titleActionPerformed
 
-    private void singlePlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singlePlayerButtonActionPerformed
+    private void MultiplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplayerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_singlePlayerButtonActionPerformed
+         jf.showPanel(1);
+    }//GEN-LAST:event_MultiplayerActionPerformed
 
-    private void multiplayerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_multiplayerButtonMouseClicked
-        jf.showPanel(1);
-    }//GEN-LAST:event_multiplayerButtonMouseClicked
+    private void ComputerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputerActionPerformed
+        // TODO add your handling code here:
+        jf.showPanel(2);
+    }//GEN-LAST:event_ComputerActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton multiplayerButton;
-    private javax.swing.JButton singlePlayerButton;
+    private javax.swing.JButton Computer;
+    private javax.swing.JButton Multiplayer;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField title;
     // End of variables declaration//GEN-END:variables
 
 }

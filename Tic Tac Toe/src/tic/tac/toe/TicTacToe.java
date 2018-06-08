@@ -18,7 +18,7 @@ public class TicTacToe {
         // TODO code application logic here
         MainJframe jf = new MainJframe();
         jf.setVisible(true);
-        jf.setSize(1000,1000);
+        jf.setSize(1200,1000);
     }
     
 }
