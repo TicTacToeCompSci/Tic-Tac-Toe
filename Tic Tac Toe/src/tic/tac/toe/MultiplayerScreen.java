@@ -34,8 +34,8 @@ private MainJframe jf;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        player1 = new javax.swing.JTextField();
-        player2 = new javax.swing.JTextField();
+        player1Name = new javax.swing.JTextField();
+        player2Name = new javax.swing.JTextField();
         homebutton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -43,17 +43,12 @@ private MainJframe jf;
         submit2 = new javax.swing.JButton();
         play = new javax.swing.JButton();
 
-        player1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        player1Name.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        player2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        player2Name.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         homebutton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         homebutton.setText("Home");
-        homebutton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homebuttonMouseClicked(evt);
-            }
-        });
         homebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 homebuttonActionPerformed(evt);
@@ -65,11 +60,26 @@ private MainJframe jf;
         jLabel2.setText("Player 2 enter your name:");
 
         submit1.setText("Submit");
+        submit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submit1ActionPerformed(evt);
+            }
+        });
 
         submit2.setText("Submit");
+        submit2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submit2ActionPerformed(evt);
+            }
+        });
 
         play.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         play.setText("Play");
+        play.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                playMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -88,10 +98,10 @@ private MainJframe jf;
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel1)
-                                .addComponent(player1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(player1Name, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
-                                .addComponent(player2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(player2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(305, 305, 305)
                         .addComponent(submit1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -106,13 +116,13 @@ private MainJframe jf;
                 .addGap(103, 103, 103)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(player1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player1Name, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(submit1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(97, 97, 97)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(player2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(submit2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
@@ -124,12 +134,26 @@ private MainJframe jf;
     }// </editor-fold>//GEN-END:initComponents
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+
+        jf.showPanel(0);
     }//GEN-LAST:event_homebuttonActionPerformed
 
-    private void homebuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homebuttonMouseClicked
-        jf.showPanel(0);
-    }//GEN-LAST:event_homebuttonMouseClicked
+    private void submit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit1ActionPerformed
+        // TODO add your handling code here:
+        String playerName1 = player1Name.getText();
+        
+    }//GEN-LAST:event_submit1ActionPerformed
+
+    private void submit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit2ActionPerformed
+        // TODO add your handling code here:
+        String playerName2 = player2Name.getText();
+  
+    }//GEN-LAST:event_submit2ActionPerformed
+
+    private void playMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playMouseClicked
+        // TODO add your handling code here:
+        jf.showPanel(3);
+    }//GEN-LAST:event_playMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -137,8 +161,8 @@ private MainJframe jf;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton play;
-    private javax.swing.JTextField player1;
-    private javax.swing.JTextField player2;
+    private javax.swing.JTextField player1Name;
+    private javax.swing.JTextField player2Name;
     private javax.swing.JButton submit1;
     private javax.swing.JButton submit2;
     // End of variables declaration//GEN-END:variables
