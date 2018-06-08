@@ -33,15 +33,32 @@ public class MainJframe extends javax.swing.JFrame {
         this.add(j2);
         j.setJf(this);
         
+          ComputerScreen j3 = new ComputerScreen();
+        panels.add(j3);
+        this.add(j3);
+        j.setJf(this);
+        
+         MultiplayerPLAY j4 = new MultiplayerPLAY();
+        panels.add(j4);
+        this.add(j4);
+        j.setJf(this);
+        
          this.pack();
-        // j.setSize(w, h);
         j.setLocation(0,0);
-        j.setSize(1000, 1000);
+        j.setSize(1200, 1000);
         j.setVisible(true);
         
         j2.setLocation(0,0);
-        j2.setSize(1000, 1000);
+        j2.setSize(1200, 1000);
         j2.setVisible(true);
+        
+         j3.setLocation(0,0);
+        j3.setSize(1200, 1000);
+        j3.setVisible(true);
+        
+        j4.setLocation(0,0);
+        j4.setSize(1200, 1000);
+        j4.setVisible(true);
         
         showPanel(0);
     }
